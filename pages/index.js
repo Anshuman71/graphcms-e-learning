@@ -18,19 +18,19 @@ const Home = ({ lessons }) => {
         {user ? (
           <div className={"px-4"}>
             <h2 className={"text-3xl"}>All lessons</h2>
-            <ul className="grid gap-y-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-4">
+            <ul className={"grid gap-y-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-4"}>
               {lessons.map((lesson) => (
-                <li key={lesson.id} className="flex flex-col">
+                <li key={lesson.id} className={"flex flex-col"}>
                   <Link href={`/video/${lesson.id}`}>
                     <a>
-                      <div className="relative aspect-video">
+                      <div className={"relative aspect-video"}>
                         <Image
                           layout="fill"
                           alt={lesson.title}
                           src={lesson.boldVideo.data.thumbnail}
                           objectFit="cover"
                           objectPosition="center"
-                          className="block w-full h-full rounded-lg"
+                          className={"block w-full h-full rounded-lg"}
                         />
                       </div>
                       <p className={"text-sm"}>{lesson.title}</p>
