@@ -71,8 +71,7 @@ export async function getStaticProps() {
       }
     }
   `;
-  const data = await hygraph.request(lessonsQuery);
-  const lessons = data.lessons;
+  const {lessons} = await hygraph.request(lessonsQuery);
   return {
     props: {
       lessons
